@@ -2,7 +2,7 @@
   <div class="hello">
     <div class="title"></div>
     <div class="dataZoom fx">
-      <div class="data"></div>
+      <div class="data">水压</div>
       <div class="data">
         <div style="width: 100%; height: 100%" ref="chart"></div>
       </div>
@@ -25,17 +25,25 @@ export default {
       let myChart = this.$echarts.init(this.$refs.chart);
       myChart.setOption({
         // backgroundColor: this.$echarts.graphic.LinearGradient(0,1,0,0, [{ offset: 0, color: 'blue'  },{ offset: 1, color: 'pink' }], false),
-        title: { text: "echarts" },
+        title: {
+          text: "水压",
+          x:'center',
+          textAlign:'center',
+          textStyle: {
+            color: '#3A7BD5',
+            fontSize: 16
+          },
+        },
         tooltip: {},
         xAxis: {
-          data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+          data: ["00:00", "05:00", "10:00", "15:00", "20:00", "01:00"],
         },
         yAxis: {},
         series: [
           {
-            name: "销量",
+            name: "水量",
             type: "line",
-            data: [5, 20, 36, 10, 10, 20],
+            data: [0, 0.16, 0.32, 0.48, 0.64, 0.9],
           },
         ],
       });
