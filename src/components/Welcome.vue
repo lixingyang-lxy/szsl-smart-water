@@ -3,7 +3,9 @@
     <div class="title"></div>
     <div class="dataZoom fx">
       <div class="data">水压</div>
+
       <div class="data">
+        <el-button>hello</el-button>
         <div style="width: 100%; height: 100%" ref="chart"></div>
       </div>
       <div class="data"></div>
